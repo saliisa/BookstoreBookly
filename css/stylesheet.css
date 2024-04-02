@@ -1,0 +1,1143 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background:#30261D;        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #684C32;    /* color of the scroll thumb */
+    border-radius: 2px;       /* roundness of the scroll thumb */
+    border: 3px solid  #684C32;  /* creates padding around scroll thumb */
+}
+body{
+    margin: 0; 
+    background-color: #F9F5E7;
+    height: 100%;
+}
+.container{
+   /* width:100%;*/
+   /* min-height:835px;*/
+  margin:20px;
+  /*min-height:450px;*/
+}
+p,h4{
+    margin:0;
+}
+a {
+    text-decoration: none;
+  color:#F9F5E7;
+   /*color:#B0926A;*/
+   /*color:white;*/
+}
+a:hover{
+   color: #30261d;
+}
+
+/*---header.php---*/
+.header {
+    background-color: #856141;
+    border-style: none;
+    padding: 10px;
+    height: fit-content;
+    display: flow-root;
+}
+.logo{
+    display: block;
+    width: 155px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.links{
+    font-size:20px;
+    height:50px;
+   text-align: center;
+    clear: both;
+}
+/*.fa-book-open{
+    display: block;
+    font-size: 50px;
+    float: left;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}*/
+.logout{
+    background-color: #684C32;
+    padding: 5px;
+    border-radius: 2px;
+    color: #F9F5E7;
+    width:150px;
+    display:block;
+    text-align: center;
+    margin: 0 auto;
+}
+.logout:hover{
+    background-color:#4d3825;
+    color: #F9F5E7;
+}
+.profile, .cart{
+    float:right;
+    width: 50%;
+    margin-top: 25px;
+    text-align: center;
+}
+.fa-user, .fa-cart-shopping{
+    font-size: 35px;
+}
+.fa-user:hover, .fa-cart-shopping:hover{
+    color: #30261d;
+}
+.nav-bar{
+    clear:both;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #684C32;
+    border: solid  #684C32;
+}
+.nav-bar li{
+    list-style-type: none;
+}
+.nav-bar ul{
+    padding:0;
+    width:100%;
+    margin:0;
+}
+.nav-bar a {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;;
+    height: 30px;
+    padding: 10px 0;
+}
+.nav-bar a:hover{
+    background-color: #856141;
+    transform: scale(1.05);
+    transition: .3s ease;
+}
+.search-bar{
+    display: flex;
+    justify-content: center;
+    background-color: #594736; 
+    /*flex-direction: column;*/
+}
+.search-bar input[type=text]{
+    height: 43px;
+    width:97.5%;
+}
+.search-btn{
+    width:100%;
+    height: 43px;
+    cursor: pointer;
+}
+.search-bar form{
+    margin:  2px 5px ;
+    width:100%;
+}
+
+
+/*----------footer.php---------*/
+.footer{
+   /* height:20%;*/
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+    height: fit-content;
+    background-color: #B0926A;
+    padding:10px;
+    font-size: 20px;
+    clear:both;
+}
+.footer-info{
+    margin:10px;
+ /*  width:100%;*/
+}
+.copyright{
+    background-color:#B0926A;
+    margin:0;
+    text-align: center;
+}
+.fa-brands {
+    color:#ffffff ;
+    font-size: 35px;
+    margin: 5px;
+}  
+.fa-brands:hover {
+    color:#594736;
+    transform: scale(1.05);
+    transition: .3s ease;
+}
+
+
+/*--register.php / login.php ---*/
+.logon h1 {
+    text-align: center;
+    color: #F9F5E7;
+    font-size: 30px;
+    padding: 15px;
+    background: #684C32;
+    margin-top:0;
+}
+.logon form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    width:250px;
+    margin:auto;
+}
+.logon form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #856141;
+    color: #F9F5E7;
+    border-radius: 5px 0 0 5px;
+}
+.logon form input[type="password"], .logon form input[type="email"], 
+.logon form input[type="text"] {
+    min-width: 150px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    border-radius: 0 5px 5px 0;
+}
+.logon button[type="submit"]{
+    width: 80%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    border-radius: 5px;
+}
+.logon button[type="submit"]:hover{
+    background-color: #2868c7;
+    transition: background-color 0.2s;
+}
+
+
+/*-----index.php----*/
+.card{
+    background-color: #594736;
+    height: 200px;
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    font-size: 30px;
+    margin:0;
+}
+.card h2{
+    font-family: 'Hammersmith One', sans-serif;
+    text-shadow: 4px 4px #856141;
+   /* width:95%;*/
+}
+.book-container{
+    margin: 30px  auto auto auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:flex-start;
+    justify-content: center;
+}
+.book-info{
+    border-radius: 2px;
+    width: 250px;
+    margin:20px 0;
+    text-align: center;
+    display: grid;
+    align-content: space-between;
+    background-color: #e4ddc6;
+}
+.toggle{
+    background-color:#856141;
+    color:white;
+    padding:5px 20px;
+    border-radius:2px;
+    border: 2px solid #856141;
+}
+.toggle:hover{
+    border: 2px solid #594736;
+    background-color:#594736;
+    color:#ffffff;
+    transform: scale(1.02);
+    transition: .2s ease;
+}
+.book-link  {
+    color:#30261d
+}
+.book-link:hover{
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: .3s ease;
+}
+.book-info img{
+    width:50%;
+    margin:10px 10px 20px 10px;
+    box-shadow: 10px 10px 2px #c4b198 ;
+}
+.book-info img:hover{
+    box-shadow: 10px 10px 2px #a69681;
+    transform: scale(1.05);
+    transition: .3s ease;
+}
+.addToCart{
+    margin:0;
+}
+.addToCart button {
+    width:100%;
+}
+.fa-basket{
+    font-size: 10px;
+}
+.fa-book {
+    font-size: 30px;
+    float: left;
+    text-align: center;
+    color: white;
+}
+.fa-book:hover {
+    color: #77aebc;
+}
+.pagination{
+    margin:  10px auto;
+    /*display: table;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.link{
+    color:#30261D;
+    padding:5px 20px;
+    border-radius:2px;
+    margin: 10px;
+    background-color: #e4ddc6; 
+}
+.link:hover{
+    background-color: #cec6ad;
+}
+
+
+/* ----book.php----*/
+.book-page{
+    margin: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.book-page img{
+    width: 80%;
+    height: 90%;
+    box-shadow: 10px 10px 2px #c4b198 ;   
+}
+.book-contents{
+    margin: 10px;
+    width:100%;
+    text-align:center;
+}
+.book-contents .toggle, .addtocart input[type="number"]{
+    width:80%;
+    height:35px;
+} 
+.book-description{
+    text-align: left;
+}
+.product-info{
+    text-align: left;
+}
+.title{
+    font-size:30px;
+}
+.book-author{
+    font-size:18px;
+}
+
+
+/*----category.php----*/
+.fiction, .non-fiction{
+   float:left;
+   width:80%;
+   margin:30px;
+}
+.sub-category a {
+    background-color: #684C32;
+    display: block;
+    padding: 20px;
+    border-radius: 2px; 
+}
+.sub-category a:hover{
+    background-color:#856141;
+    transform: scale(1.05);
+    transition: .3s ease;
+}
+    
+
+/*---fiction.php & non-fiction.php---*/
+.back-link {
+  color:#F9F5E7;
+  font-size: 20px;
+  margin:50px;
+  display: block;
+  background-color: #856141;
+  text-align: center;
+  width: 100px;
+  border-radius: 2px;
+}
+.book-subcategory-title{
+    margin:50px;
+}
+
+
+/*----author.php----*/
+.author-container{
+    margin: 20px 20px 40px 20px;
+}
+.author-books-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.author-book{
+    margin: 10px 10px 40px 10px;
+    width:140px;
+    text-align: center;
+}
+.author-book img{
+    width: 100px;
+    margin-bottom: 10px;
+    box-shadow: 10px 10px 2px #c4b198 ;
+}
+.author-book img:hover{
+    box-shadow: 10px 10px 2px #a69681;
+    transform: scale(1.05);
+    transition: .3s ease;
+}
+.author-book h2{
+    margin-bottom: 0;
+}
+
+
+/*--- search_results.php---*/
+.result-container{
+   /* margin:15px;*/
+    clear:both;
+    min-height: 400px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:flex-start;
+    justify-content: flex-start;
+}
+.view-more {
+    background-color: #684C32;
+    padding: 10px;
+}
+.view-more:hover{
+    background-color:#856141;
+}
+.no-results{
+    width:100%;
+}
+
+
+/*----profile.php----*/
+
+.edit{
+    display: flex;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    margin-bottom:10px;
+}
+.edit h3{
+    margin:5px;
+}
+.content {
+	width: 80%;
+	margin: 0 auto;
+    min-height:390px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    padding: 25px;
+	background-color: #fff;
+}
+.profile-info{
+    padding: 5px;
+}
+.profile-info h4{
+    color: #684C32;
+}
+.profile-info{
+    display: flex;
+    flex-direction: column;
+}
+.profile-info h4, .profile-info p{
+    width:200px;
+}
+.button{
+    color: white;
+    font-size: 15px;
+    border: 2px solid #856141;
+    /*margin: 10px auto;*/
+    display: block;
+    background-color: #856141;
+    text-align: center;
+    width: 100px;
+    border-radius: 2px;
+    padding:5px;
+}
+.button:hover{
+    border: 2px solid #594736;
+    background-color:#594736;
+    color:#ffffff;
+    transform: scale(1.02);
+    transition: .2s ease;
+}
+.page{
+    color: #684C32;
+    margin: 0;
+	padding: 25px 0;
+    width:100%;
+    display: inline-block;
+    font-size:23px;
+    font-weight:600;
+    text-align: center;
+}
+.page:hover{
+    /*border-bottom: solid #684C32 ;*/
+    text-decoration: underline;
+}
+
+
+/*-----edit_user.php----*/
+.profile-info input{
+    height:40px;
+}
+.profile-info input, .profile-info textarea{
+    width:100%;
+}
+
+/*-----order_history.php----*/
+.order-container{
+    min-height: 200px; /* 390px*/
+}
+.order{
+    width:85%;
+    margin: 10px auto;
+    height: fit-content;
+    padding:20px;
+    background-color: white;
+    margin: 20px auto;   
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+.order-info{
+    /*display:flex;*/
+    flex-direction:column;
+    flex-wrap: wrap;
+    padding:10px;
+}
+.order-info p{
+    margin:0 10px;
+    width:90%;
+}
+.order-details{
+    margin:10px;
+    clear:both;
+}
+.items{
+    margin:20px 0;
+    border-bottom:  2px solid #ddd;
+    width: 100%;
+}
+
+/*-----order.php----*/
+.cus-info{
+    margin:10px 0;
+}
+.items p{
+    max-width:250px;
+}
+.items img{
+    box-shadow: 0 0 5px 0 #818181;
+    margin:10px;
+    width:60px;
+}
+   
+
+
+
+/*-----cart.php----*/
+.cart-header, .item{
+    display:flex;
+    flex-direction: column;
+}
+.col{
+   /* flex:1;*/
+   /*width:200px;*/
+   width:100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin:5px;
+   justify-content: center;
+}
+.cart-content{
+    width: 90%;
+    margin: 0 auto;
+    min-height:390px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item{
+   
+    background-color: white;
+    padding:10px;
+    border-bottom:  2px solid #c8c6c6;
+    
+}
+.cart-item{
+    border-collapse: collapse;
+    border-radius:2px; 
+   /* margin:20px; */
+
+    display: flex;
+    flex-direction: column;
+   
+   
+} 
+.cart-header{
+    background-color: #856141;
+    color: white;
+ 
+    height:40px;
+  border-radius: 2px;
+   
+}
+.action{
+    color: #856141;
+    margin:10px;
+   background-color:transparent;
+   font-size: large;
+}
+.action:hover{
+    color:#30261D;  
+}
+.cart-item button{
+    border:0;
+    cursor: pointer;
+   
+}
+.item img{
+    width: 60px;
+    box-shadow: 0 0 5px 0 #818181;
+}
+.quantity{
+    width: 40px;
+    text-align: center;
+}
+.quantity-container{
+    display:flex;
+    flex-direction:row;
+    align-items:baseline;
+}
+
+.quantity-container form{
+    margin:0;
+}
+.order-all button{
+    margin-top: 20px;;
+}
+
+
+
+
+/*-----create_order.php----*/
+.create-order{
+    display:flex;
+    flex-direction: column;
+}
+.info  input, .info textarea{
+    height:40px;
+   width:100%;
+    margin:10px 0 ;
+}
+.info{
+    margin:10px;
+}
+.info form{
+    display:block;
+}
+.cart-review{
+    background-color:#fff;
+    padding:10px;
+    height: fit-content;
+    margin:10px;
+    border-radius: 2px;
+}
+.cart-review h3{
+    color:#fff;
+    background-color:#856141;
+    margin:0;
+    padding:20px;
+    border-radius: 2px;
+}
+.cart-review-item{
+    display:flex;
+    justify-content: space-between;
+    flex-direction:column;
+    margin:20px;
+    border-bottom:  2px solid #ddd;
+}
+.cart-review-item p{
+   margin:5px;
+   max-width:250px;
+   width:90%;
+}
+.submit{
+    display:flex;
+    justify-content: space-between;
+
+} 
+.submit a, .submit button{
+    margin:  5px;
+}
+
+
+
+/*-----order_status.php----*/
+.status{
+    min-height: 400px;
+    text-align: center;
+}
+
+
+
+
+
+
+@media screen and (min-width: 280px) { /* Phone-------------------------------------------------------------------*/
+
+
+    /*---index.php---*/
+    body{
+       /* height:1200px*/
+       /*min-height: 1000px;*/
+       min-height: 850px;
+   }
+
+  
+
+ 
+
+
+    
+   
+
+
+}
+
+
+
+@media screen and (min-width: 420px) { /* 420px or 450px??------------------------------------------------------------*/
+    /*---header.php---*/
+    .logo {
+        float: left;
+    }
+    .logout{
+        float:right;
+        margin-right:20px;
+    }
+    .profile ,.cart{
+        width:30%; /*50%*/
+        clear:left;
+        margin-top: 0;
+    }
+    .links{
+       height:70px;
+       clear:none; 
+       text-align: unset;
+    }
+    .nav-bar ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav-bar a{
+        min-width: 130px;
+    }
+    .search-bar input[type=text]{
+        width:80%;
+    }
+    .search-btn{
+        width: 18%;
+        height: 45px;
+    }
+
+    /*----------footer.php---------*/
+    .footer{
+        flex-direction: row;
+    }
+    .footer-info{
+        width: 80%;
+    }
+    .icons{
+        width:130px;
+    }
+
+    /*-----register.php / login.php-----*/
+    .logon{
+        min-width: 400px;
+    }
+    .logon form{
+        width:400px;
+        margin:auto;
+    }
+    .logon form input[type="password"], .logon form input[type="email"], 
+    .logon form input[type="text"] {
+        width: 310px;
+    }
+
+   
+
+    /*-----book.php----*/
+    .book-page img{
+        width: 60%;
+    }
+    .book-contents .toggle, .addtocart input[type="number"]{
+        width:65%;
+    } 
+
+    /*---fiction.php & non-fiction.php---*/
+   .subcategory-container{
+        min-height: 300px;
+    }
+    .book-subcategory{
+       width:30%;
+    }
+
+    /*----author.php----*/
+    .author-books-container{
+        flex-direction: row;
+        flex-wrap: wrap
+    }
+
+
+    /*--- search_results.php---*/
+    .result-container{
+        clear:both;
+        min-height: 500px;
+    }
+   
+
+    /*-----profile.php-------*/
+    .edit{
+        justify-content: space-between;
+    }
+    .profile-info{
+        flex-direction: row;
+    }
+    .page{
+        width:49%;
+    }
+    .button{
+        margin:20px;
+    }
+
+
+    /*---order_history---*/
+    .items{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+
+
+
+
+   
+
+
+}
+
+
+
+@media screen and (min-width: 540px) { /* was 560 px         530px-------------------------------------------------------------*/
+   /*---------header.php---------*/
+    .nav-bar a{
+        min-width: 170px;
+    }
+    .search-bar form{
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .search-bar input[type=text]{
+        height: 40px;
+    }
+   /* .search-btn{
+        height: 40px;
+    }*/
+  
+   /*----------footer.php---------*/
+    .icons{
+        width: max-content;
+    }
+    .footer-info{
+        width: unset;
+    }
+
+    /*----index.php -----*/
+    .book-container{
+        justify-content:flex-start;
+    }
+    .book-info{
+        margin:20px ;
+    }
+
+    /* ----book.php----*/
+    .book-page{
+        flex-direction: row;
+        align-items: normal; 
+    }
+    .book-page img{
+        width: 40%;
+        margin:20px;
+    }
+    .book-contents{
+        font-size:medium;
+        text-align:left;
+    }
+
+    /*---category.php---*/
+    .category-container{
+       min-height: 300px;
+    }
+    .fiction, .non-fiction{
+        width:35%;
+    }
+    .sub-category a {
+        width:90%; 
+    }
+
+    /*---fiction.php & non-fiction.php---*/
+    .book-subcategory{
+       width:120px;   
+    }
+
+
+    /*---edit_user----*/
+    .profile-info input, .profile-info textarea{
+        max-width:300px;
+    }
+
+    /*-----order.php-----*/
+    .cus-info{
+        float:left;
+        width: 50%;
+    }
+
+
+    /*---cart.php---*/
+  /*  .cart-content{
+        align-items:flex-end;
+    }*/
+    .item{
+        flex-direction: row;
+    }
+
+
+    /*---create_order.php---*/
+    .create-order{
+        flex-direction: row-reverse;
+
+    }
+    .cart-review{
+       width:45%;
+    }
+  
+
+
+
+   
+
+
+
+
+}
+
+
+
+@media screen and (min-width: 700px) { /* -------------------------------------------------------------------*/
+   /*---header.php----*/
+   .nav-bar a{
+        min-width: 220px;
+    }
+    .profile, .cart{
+        width:21%;
+    }
+    .search-bar input[type=text]{
+        width:75%
+    }
+    .search-btn{
+        width: 15%;
+    }
+
+    /*---index.php----*/
+    .book-container{
+       justify-content:flex-start;
+    }
+
+    /* ----book.php----*/
+    .book-page{
+        flex-direction: row;
+        align-items: normal;
+        margin:30px;
+    }
+    .book-contents{
+        width:70%;
+        text-align: left;
+    }
+    .book-contents .toggle, .addtocart input[type="number"]{
+      max-width:200px;
+    } 
+    
+    /*---category.php---*/
+    .category-container{
+       margin-left:10%;
+    }
+
+    /*---fiction.php & non-fiction.php---*/
+    .book-subcategory{
+        width:125px;   
+    }
+
+    
+    /*--order_history--*/
+     .order{
+       width:600px;
+    }
+
+
+
+    /*--cart.php--*/
+  /*  .cart-content{
+        align-items:flex-end;
+    }*/
+
+   
+    
+    /*---create_order.php---*/
+    .create-order{
+        justify-content: space-around;
+    }
+  
+    .cart-review{
+        max-width:450px;
+    }
+   
+    
+
+
+    
+ 
+}
+
+
+
+@media screen and (min-width: 900px) {/*-------------------------------------------------------------------*/
+    /*---header.php----*/
+    .nav-bar a{
+        min-width:285px; 
+    }
+    .profile, .cart{
+        width:17%;
+    }
+    .search-bar input[type=text]{
+        width:60%
+    }
+    .search-btn{
+        width: 10%;
+    }
+
+    /*---index.php---*/
+    .book-container{
+        justify-content:flex-start;
+    }
+    
+    /* ----book.php----*/
+    .book-contents{
+       margin-left:30px;
+    }
+    .book-page img{
+        width: 350px;
+    }
+
+    /*---fiction.php & non-fiction.php---*/
+    .book-subcategory{
+        width:160px;   
+    }
+
+
+    /*----profile.php---*/
+    .content{
+        width:700px;
+    }
+
+
+
+
+
+   
+   /*---create_order.php--*/
+    .cart-review-item{
+        flex-direction:row;
+        align-items: center;
+    }
+
+    /*-----order_status.php----*/
+    .status{
+        font-size:18px;
+    }
+
+
+
+}
+
+
+
+@media screen and (min-width: 1300px){ /* -------------------------------------------------------------------*/
+    /*---header.php----*/
+    .nav-bar a{
+        min-width:400px; 
+    }
+    .profile, .cart{
+        width:13%;
+    }
+
+    /*---category.php---*/
+    .category-container{
+        margin-left:15%;
+    }
+
+
+    /*--create_order.php--*/
+    .create-order {
+        justify-content: space-evenly;
+    }
+
+
+
+
+}
+
+

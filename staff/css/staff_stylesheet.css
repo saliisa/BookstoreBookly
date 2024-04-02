@@ -1,0 +1,565 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background:#30261D;        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: grey;    /* color of the scroll thumb */
+  border-radius: 2px;       /* roundness of the scroll thumb */
+  border: 3px solid  grey;  /* creates padding around scroll thumb */
+}
+body{
+ /* background-color: #F9F5E7;*/
+ background-color: #d9d9d9;
+ margin: 0;
+}
+.container{
+  margin:20px;
+}
+a {
+  text-decoration: none;
+}
+hr{
+  margin:0;
+}
+
+/*------Staff_header.php ----------*/
+.header {
+  background-color: #856141;
+  border-style: none;
+  padding: 10px;
+  color: #d9d9d9;
+ display: flex;
+ justify-content: space-between;
+ border-bottom: 2px  solid #594736;
+}
+.header h1{
+  margin:0;
+  width:50%;
+}
+.logout{
+  background-color: #684C32;
+  padding:5px;
+  border-radius: 2px;
+  color:#F9F5E7;
+  font-size:large;
+}
+.logout:hover{
+  background-color:#4d3825;
+  transform: scale(1.02);
+  transition: .3s ease;
+}
+.nav-bar{
+  clear:both;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-bar li{
+  list-style-type: none;
+}
+.nav-bar ul{
+  padding:0;
+  width:100%;
+  margin:0;
+}
+.nav-bar a {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;;
+  padding: 10px 0;
+  color: #30261D;
+  font-size: x-large;
+}
+.nav-bar a:hover{
+  background-color: #9a9797;
+  transform: scale(1.02);
+  transition: .3s ease;
+}
+
+
+/*---------- Staff.php--------*/
+.login h1 {
+  color: #F9F5E7;
+  font-size: 30px;
+  padding: 15px;
+  background: #684C32;
+  margin:0;
+  min-width:250px;
+}
+.login form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  width:250px;
+  margin-left:10px;
+}
+.login form label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #856141;
+  color: #F9F5E7;
+ border-radius: 5px 0 0 5px;
+}
+.login form input[type="password"], .login form input[type="email"] {
+  min-width: 200px;
+  height: 50px;
+  border: 1px solid #dee0e4;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  border-radius: 0 5px 5px 0;
+}
+.login button[type="submit"] {
+  width: 50%;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #3274d6;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.2s;
+  border-radius: 5px;
+}
+.login button[type="submit"]:hover {
+  background-color: #2868c7;
+  transition: background-color 0.2s;
+}
+
+
+/*-------------- staff_book.php ------------*/
+
+.toggle{
+  background-color:#856141;
+  color:white;
+  padding:5px 20px;
+  border-radius:2px;
+  border: 2px solid #856141;
+}
+.toggle:hover{
+  border: 2px solid #594736;
+  background-color:#594736;
+  transform: scale(1.02);
+  transition: .3s ease;
+}
+.pagination{
+  margin:  30px auto;
+  display: flex;
+  justify-content: center;
+}
+.link{
+  color:#30261D;
+  padding:5px 20px;
+  border-radius:2px;
+  margin: 10px;
+  background-color: #f7f5f5;
+}
+.link:hover{
+  background-color: #cacaca;
+}
+p,h4{
+  margin:0;
+}
+.top{
+  display:flex;
+  justify-content:space-between;
+  flex-direction: column;
+  margin:10px;
+}
+.search-bar{
+  margin:10px 0;
+  width:100%;
+}
+input[type="text"]{
+  height:45px;
+  width:100%;
+  border:1px solid gray;
+  border-radius:2px;
+}
+input[type="submit"]{
+  height:45px;
+  width:100%;
+}
+.book-container{
+  margin: 0 auto;
+  margin: 30px;
+  /*margin-top*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content:flex-start;
+  justify-content: center;
+}
+.book-info{
+  background-color: #f7f5f5;
+  border-radius: 2px;
+  width: 220px;
+  margin:20px;
+ text-align: center;
+ display: grid;
+ align-content: space-between;
+}
+.book-info img{
+  width:50%;
+  padding:0;
+  box-shadow: 10px 10px 2px #9f9f9f;
+  margin:10px 10px 20px 10px;
+}
+.book-info img:hover{
+  box-shadow: 10px 10px 2px #818181;
+  transform: scale(1.05);
+  transition: .3s ease;
+}
+.top .toggle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+}
+.book-link  {
+  color:#30261d
+}
+.book-link:hover{
+  text-decoration: underline;
+}
+
+
+
+/*------single_book.php------------*/
+.book-page{
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.book-page img{
+  width: 80%;
+  height: 90%;
+  margin:10px;
+  box-shadow: 10px 10px 2px #9f9f9f;
+}
+.book-contents{
+  margin: 20px;
+  width:100%;
+  text-align:center;
+  display: flex;
+  flex-direction: column;
+}
+.book-contents .toggle{
+  width: 80%;
+}
+.book-description{
+  text-align: left;
+}
+.product-info{
+  text-align: left;
+}
+.book-title{
+  font-size:25px;
+}
+.book-author{
+  font-size:18px;
+}
+
+
+
+/*---------Staff_order.php------------*/
+.order{
+  width:85%;
+  margin: 10px auto;
+  height: fit-content;
+  border:solid #c8c8c8;
+  padding:20px;
+  background-color: white;
+  margin: 20px auto;   
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+.order-info{
+  /*display:flex;*/
+  flex-direction:column;
+  flex-wrap: wrap;
+  padding:10px;
+}
+.order-info p{
+  margin:0 10px;
+  width:90%;
+}
+.order-details{
+  margin:10px;
+  clear:both;
+}
+.items{
+  margin:20px 0;
+  border-bottom:  2px solid #ddd;
+  width: 100%;
+}
+.top{
+  display:flex;
+  justify-content:space-between;
+  margin:10px;
+}
+
+/*---------single_order.php------------*/
+.cus-info{
+ margin:10px 0;
+}
+.items p{
+  max-width:250px;
+}
+.items img{
+  box-shadow: 0 0 5px 0 #818181;
+  margin:10px;
+  width:60px;
+}
+
+
+/*---------search_book.php------------*/
+.result-container{
+  clear:both;
+  min-height: 400px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content:flex-start;
+  justify-content: flex-start;
+
+}
+.no-results{
+  width:100%;
+}
+
+
+
+/*---------add_book.php------------*/
+.form-book{ 
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  margin: auto;
+}
+input, select, option{
+  height: 40px;
+}
+option{
+  font-size:120%;
+}
+.subcategory{
+  display:flex;
+}
+
+
+/*---------edit_book.php------------*/
+
+.submit{
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+
+
+
+
+@media screen and (min-width: 280px){
+
+
+}
+
+
+@media screen and (min-width: 420px){
+
+/*-----staff_header.php-----*/
+.nav-bar ul{
+  display: flex;
+  justify-content: space-around;
+}
+.nav-bar a{
+  min-width:135px; /* 141px*/
+}
+  
+/*---------- Staff.php--------*/
+.login form {
+  width:400px;
+}
+.login form input[type="password"], .login form input[type="email"] {
+  width: 310px;
+}
+
+/*------ staff_book.php-----*/
+.book-info{
+  width: 250px;
+}
+.top .toggle {
+  width:25%;
+  height:30px;
+}
+.search-bar input[type="text"]{
+  width:75%;
+  height:40px;
+}
+.search-bar input[type="submit"]{
+  width:20%;
+  height:43px;
+}
+.top{
+  flex-wrap: wrap;
+}
+
+/*------single_book.php------*/
+.book-page img{
+  width: 60%;
+}
+
+/*---------Staff_order.php------------*/
+.items{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*---------edit_book.php------------*/
+.submit{
+  flex-direction: row;
+  align-items: center;
+}
+.submit .toggle{
+ width: 150px;
+}
+
+}
+
+
+
+@media screen and (min-width: 540px){
+/*-----staff_header.php-----*/
+.nav-bar a{
+  min-width:175px; 
+}
+
+/*------ staff_book.php-----*/
+.book-container{
+  justify-content: flex-start;
+}  
+.search-bar {
+  width:70%;
+}
+.top{
+  flex-direction: row;
+  align-items: baseline;
+}
+.top .toggle{
+  height:25px;
+  width:20%;
+}
+
+/*------single_book.php------*/
+.book-page{
+  flex-direction: row;
+  align-items: flex-start;
+}
+.book-page img{
+  width: 40%;
+}
+.book-contents{
+  text-align: left;
+}
+.book-contents .toggle{
+  text-align: center;
+}
+
+/*---------single_order.php------------*/
+.cus-info{
+  float:left;
+  width: 50%;
+}
+.top h2{
+  width:25%;
+}
+
+/*---------add_book.php------------*/
+.form-book{ 
+  width:500px;
+}
+
+}
+
+
+
+@media screen and (min-width: 700px){
+/*-----staff_header.php-----*/
+.nav-bar a{
+  min-width:225px; 
+}
+
+/*------ staff_book.php-----*/
+.search-bar{
+  width:450px;
+}
+.top .toggle{
+  width:130px;
+}
+
+/*------single_book.php------*/
+.book-contents .toggle{
+  width: 50%;
+}
+.book-page img{
+  width: 350px;
+}
+
+/*---------Staff_order.php------------*/
+.order{
+  width:600px;
+}
+
+/*---------single_order.php------------*/
+.top h2{
+  width:31%;
+}
+
+}
+
+
+@media screen and (min-width: 900px){
+/*-----staff_header.php-----*/
+.nav-bar a{
+  min-width:290px; 
+}
+.logout{
+ font-size: 18px;
+}
+.index{
+  font-size: large;
+}
+
+/*------single_book.php------*/
+.book-contents .toggle{
+  width: 30%;
+}
+
+}
+
+
+
+@media screen and (min-width: 1300px){
+/*-----staff_header.php-----*/
+.nav-bar a{
+  min-width:400px; 
+}
+.logout{
+ font-size: 20px;
+}
+
+/*------single_book.php------*/
+.book-author{
+  font-size:20px;
+}
+
+}
