@@ -127,13 +127,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             <div class="cart-header">
                 <p class="col"> Cart: </p>
             </div>
-
+           
             <?php
             while ($row = $result->fetch_assoc()) { ?>
                 <div class="item">
                     <?php
                     echo ('<p class="col"><img src='. htmlspecialchars($row["cover_image"]).'></p>
-                            <p class="col">' . htmlspecialchars($row["title"]) . '</p>
+                            <p class="col">' . html_entity_decode(htmlspecialchars($row["title"])) . '</p>  
                             <p class="col">' . htmlspecialchars($row["author"]) . '</p>
                             <p class="col">' . htmlspecialchars($row["total_price"]) .' €</p>
 
