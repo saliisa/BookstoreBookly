@@ -14,13 +14,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $postalCode = isset($_POST['postal_code']) ? filter_var($_POST['postal_code'], FILTER_SANITIZE_STRING) : '';
     
     if (empty($firstname) || empty($lastname) || empty($email) ||empty($address) || empty($city)|| empty($country)|| empty($postalCode)){
-      header('Location: edit_user.php?cusID='.$cusID.'&error=empty_fields');
+      header('Location: edit_user.php?error=empty_fields');
       die();
     }else {
         $updateQuery = "UPDATE customer SET first_name = ?, last_name = ?, email= ?, 
         address= ?, city= ?, country = ?, postal_code= ? WHERE Customer_id = ?";
         $stmt = $conn->prepare($updateQuery);
-        $stmt->bind_param("sssssssi", $firstname, $lastname, $email, $address,  $city, $country, $postalCode, $cusID);
+        $stmt->bind_param("ssssssss", $firstname, $lastname, $email, $address,  $city, $country, $postalCode, $cusID);
 
         if ($stmt->execute()) {
             header('Location: profile.php');

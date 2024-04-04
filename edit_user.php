@@ -71,7 +71,7 @@
 		</div>
 		<div class="profile-info">
 			<h4>Postal Code:</h4>
-			<input type="text" name="postal_code" value="<?php echo htmlspecialchars($row['postal_code']); ?>"><br>
+			<input type="text" name="postal_code" maxlength=5 value="<?php echo htmlspecialchars($row['postal_code']); ?>"><br>
 		</div>
 		<div class="submit">
 			<input class="toggle" type="submit" value="Save & Update">   
