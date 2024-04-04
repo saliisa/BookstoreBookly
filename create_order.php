@@ -44,7 +44,7 @@
                         echo('  
                             <div class="cart-review-item">
                                 <p>'.htmlspecialchars($amount).'x</p>
-                                <p>'.htmlspecialchars($title).' </p>
+                                <p>'.html_entity_decode(htmlspecialchars($title)).' </p>
                                 <p>'.htmlspecialchars($total_price).' €</p>
                             </div>');
                     }
