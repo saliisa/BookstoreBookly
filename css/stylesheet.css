@@ -732,11 +732,11 @@ a:hover{
         min-width: 130px;
     }
     .search-bar input[type=text]{
-        width:80%;
+        width:79%;
     }
     .search-btn{
         width: 18%;
-        height: 45px;
+        height: 49px;
     }
 
     /*----------footer.php---------*/
@@ -829,6 +829,11 @@ a:hover{
     .search-bar input[type=text]{
         height: 40px;
     }
+    .search-btn{
+       
+        height: 46px;
+    }
+
   
    /*----------footer.php---------*/
     .icons{
