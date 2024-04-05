@@ -2,15 +2,15 @@
     font-family: 'Poppins', sans-serif;
 }
 body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
+    width: 12px;             
 }
 body::-webkit-scrollbar-track {
-    background:#30261D;        /* color of the tracking area */
+    background:#30261D;       
 }
 body::-webkit-scrollbar-thumb {
-    background-color: #684C32;    /* color of the scroll thumb */
-    border-radius: 2px;       /* roundness of the scroll thumb */
-    border: 3px solid  #684C32;  /* creates padding around scroll thumb */
+    background-color: #684C32;  
+    border-radius: 2px;       
+    border: 3px solid  #684C32; 
 }
 body{
     margin: 0; 
@@ -28,9 +28,8 @@ p,h4{
 }
 a {
     text-decoration: none;
-  color:#F9F5E7;
-   /*color:#B0926A;*/
-   /*color:white;*/
+    color:#F9F5E7;
+  
 }
 a:hover{
    color: #30261d;
@@ -58,13 +57,6 @@ a:hover{
    text-align: center;
     clear: both;
 }
-/*.fa-book-open{
-    display: block;
-    font-size: 50px;
-    float: left;
-    margin-bottom: 5px;
-    margin-top: 15px;
-}*/
 .logout{
     background-color: #684C32;
     padding: 5px;
@@ -141,7 +133,6 @@ a:hover{
 
 /*----------footer.php---------*/
 .footer{
-   /* height:20%;*/
     display: flex;
     justify-content:space-around;
     flex-direction: column;
@@ -153,7 +144,6 @@ a:hover{
 }
 .footer-info{
     margin:10px;
- /*  width:100%;*/
 }
 .copyright{
     background-color:#B0926A;
@@ -239,7 +229,6 @@ a:hover{
 .card h2{
     font-family: 'Hammersmith One', sans-serif;
     text-shadow: 4px 4px #856141;
-   /* width:95%;*/
 }
 .book-container{
     margin: 30px  auto auto auto;
@@ -310,7 +299,6 @@ a:hover{
 }
 .pagination{
     margin:  10px auto;
-    /*display: table;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -428,7 +416,6 @@ a:hover{
 
 /*--- search_results.php---*/
 .result-container{
-   /* margin:15px;*/
     clear:both;
     min-height: 400px;
     margin-top: 30px;
@@ -454,7 +441,6 @@ a:hover{
 
 .edit{
     display: flex;
-    /*flex-direction: column;*/
     flex-wrap: wrap;
     margin-bottom:10px;
 }
@@ -486,7 +472,6 @@ a:hover{
     color: white;
     font-size: 15px;
     border: 2px solid #856141;
-    /*margin: 10px auto;*/
     display: block;
     background-color: #856141;
     text-align: center;
@@ -512,10 +497,8 @@ a:hover{
     text-align: center;
 }
 .page:hover{
-    /*border-bottom: solid #684C32 ;*/
     text-decoration: underline;
 }
-
 
 /*-----edit_user.php----*/
 .profile-info input{
@@ -571,17 +554,12 @@ a:hover{
     width:60px;
 }
    
-
-
-
 /*-----cart.php----*/
 .cart-header, .item{
     display:flex;
     flex-direction: column;
 }
 .col{
-   /* flex:1;*/
-   /*width:200px;*/
    width:100%;
    display: flex;
    flex-direction: column;
@@ -598,35 +576,27 @@ a:hover{
     align-items: center;
 }
 .item{
-   
     background-color: white;
     padding:10px;
     border-bottom:  2px solid #c8c6c6;
-    
 }
 .cart-item{
     border-collapse: collapse;
     border-radius:2px; 
-   /* margin:20px; */
-
     display: flex;
     flex-direction: column;
-   
-   
 } 
 .cart-header{
     background-color: #856141;
     color: white;
- 
     height:40px;
-  border-radius: 2px;
-   
+    border-radius: 2px;
 }
 .action{
     color: #856141;
     margin:10px;
-   background-color:transparent;
-   font-size: large;
+    background-color:transparent;
+    font-size: large;
 }
 .action:hover{
     color:#30261D;  
@@ -634,7 +604,6 @@ a:hover{
 .cart-item button{
     border:0;
     cursor: pointer;
-   
 }
 .item img{
     width: 60px;
@@ -649,16 +618,12 @@ a:hover{
     flex-direction:row;
     align-items:baseline;
 }
-
 .quantity-container form{
     margin:0;
 }
 .order-all button{
     margin-top: 20px;;
 }
-
-
-
 
 /*-----create_order.php----*/
 .create-order{
@@ -711,18 +676,11 @@ a:hover{
     margin:  5px;
 }
 
-
-
 /*-----order_status.php----*/
 .status{
     min-height: 400px;
     text-align: center;
 }
-
-
-
-
-
 
 @media screen and (min-width: 280px) { /* Phone-------------------------------------------------------------------*/
 
@@ -747,7 +705,7 @@ a:hover{
 
 
 
-@media screen and (min-width: 420px) { /* 420px or 450px??------------------------------------------------------------*/
+@media screen and (min-width: 420px) { /* ------------------------------------------------------------*/
     /*---header.php---*/
     .logo {
         float: left;
@@ -805,8 +763,6 @@ a:hover{
         width: 310px;
     }
 
-   
-
     /*-----book.php----*/
     .book-page img{
         width: 60%;
@@ -829,14 +785,12 @@ a:hover{
         flex-wrap: wrap
     }
 
-
     /*--- search_results.php---*/
     .result-container{
         clear:both;
         min-height: 500px;
     }
    
-
     /*-----profile.php-------*/
     .edit{
         justify-content: space-between;
@@ -851,21 +805,12 @@ a:hover{
         margin:20px;
     }
 
-
     /*---order_history---*/
     .items{
         display:flex;
         justify-content: space-between;
         align-items: center;
     }
-
-
-
-
-
-
-   
-
 
 }
 
@@ -884,9 +829,6 @@ a:hover{
     .search-bar input[type=text]{
         height: 40px;
     }
-   /* .search-btn{
-        height: 40px;
-    }*/
   
    /*----------footer.php---------*/
     .icons{
@@ -934,7 +876,6 @@ a:hover{
        width:120px;   
     }
 
-
     /*---edit_user----*/
     .profile-info input, .profile-info textarea{
         max-width:300px;
@@ -946,15 +887,10 @@ a:hover{
         width: 50%;
     }
 
-
     /*---cart.php---*/
-  /*  .cart-content{
-        align-items:flex-end;
-    }*/
     .item{
         flex-direction: row;
     }
-
 
     /*---create_order.php---*/
     .create-order{
@@ -964,15 +900,6 @@ a:hover{
     .cart-review{
        width:45%;
     }
-  
-
-
-
-   
-
-
-
-
 }
 
 
@@ -1021,35 +948,18 @@ a:hover{
         width:125px;   
     }
 
-    
     /*--order_history--*/
      .order{
        width:600px;
     }
-
-
-
-    /*--cart.php--*/
-  /*  .cart-content{
-        align-items:flex-end;
-    }*/
-
-   
     
     /*---create_order.php---*/
     .create-order{
         justify-content: space-around;
     }
-  
     .cart-review{
         max-width:450px;
     }
-   
-    
-
-
-    
- 
 }
 
 
@@ -1087,17 +997,11 @@ a:hover{
         width:160px;   
     }
 
-
     /*----profile.php---*/
     .content{
         width:700px;
     }
 
-
-
-
-
-   
    /*---create_order.php--*/
     .cart-review-item{
         flex-direction:row;
@@ -1108,8 +1012,6 @@ a:hover{
     .status{
         font-size:18px;
     }
-
-
 
 }
 
@@ -1129,14 +1031,10 @@ a:hover{
         margin-left:15%;
     }
 
-
     /*--create_order.php--*/
     .create-order {
         justify-content: space-evenly;
     }
-
-
-
 
 }
 
