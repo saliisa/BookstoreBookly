@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
                         <h3>Product Infomation:</h3>
                         <p><b> Title: </b>'. html_entity_decode(htmlspecialchars($row["title"])).'</p>
                         <p><b> Author: </b>'.htmlspecialchars($row["author"]).'</p>
-                        <p><b> Year: </b>'.htmlspecialchars($row["pub_year"]).'</p>
+                        <p><b> Published Year: </b>'.htmlspecialchars($row["pub_year"]).'</p>
                         <p><b> ISBN: </b>'.htmlspecialchars($row["isbn"]).'</p>
                         <p><b> Category: </b>'.htmlspecialchars($row["category"]).'</p>
                         <p><b> Sub-category: </b>'.htmlspecialchars($row["subcategory"]).'</p>
