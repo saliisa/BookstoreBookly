@@ -14,7 +14,7 @@
 
 <div class="author-container">
 <?php
-$itemsPerPage = 5; 
+$itemsPerPage = 4; 
 $page = isset($_GET['page']) ?  intval($_GET['page']) : 1;
 $offset = ($page - 1) * $itemsPerPage;
 
