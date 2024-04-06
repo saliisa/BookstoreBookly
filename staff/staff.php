@@ -66,7 +66,7 @@
         $conn->close();
     }
     ?>
-
+</div>
     <form action="staff.php" method="post">
         <label for="email"><i class="fa-solid fa-at"></i></label>
         <input type="email" id="email" name="email" required placeholder ="Email"><br>
@@ -75,7 +75,6 @@
         <button type="submit">Login</button>
         <br>
     </form>
-</div>
 </body>
 </html>
 
