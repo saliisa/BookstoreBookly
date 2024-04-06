@@ -16,12 +16,10 @@ body{
     margin: 0; 
     background-color: #F9F5E7;
     height: 100%;
+    min-height: 850px;
 }
 .container{
-   /* width:100%;*/
-   /* min-height:835px;*/
   margin:20px;
-  /*min-height:450px;*/
 }
 p,h4{
     margin:0;
@@ -29,7 +27,6 @@ p,h4{
 a {
     text-decoration: none;
     color:#F9F5E7;
-  
 }
 a:hover{
    color: #30261d;
@@ -114,7 +111,6 @@ a:hover{
     display: flex;
     justify-content: center;
     background-color: #594736; 
-    /*flex-direction: column;*/
 }
 .search-bar input[type=text]{
     height: 43px;
@@ -349,7 +345,6 @@ a:hover{
     font-size:18px;
 }
 
-
 /*----category.php----*/
 .fiction, .non-fiction{
    float:left;
@@ -367,7 +362,6 @@ a:hover{
     transform: scale(1.05);
     transition: .3s ease;
 }
-    
 
 /*---fiction.php & non-fiction.php---*/
 .back-link {
@@ -383,7 +377,6 @@ a:hover{
 .book-subcategory-title{
     margin:50px;
 }
-
 
 /*----author.php----*/
 .author-container{
@@ -413,7 +406,6 @@ a:hover{
     margin-bottom: 0;
 }
 
-
 /*--- search_results.php---*/
 .result-container{
     clear:both;
@@ -436,9 +428,7 @@ a:hover{
     width:100%;
 }
 
-
 /*----profile.php----*/
-
 .edit{
     display: flex;
     flex-wrap: wrap;
@@ -632,7 +622,7 @@ a:hover{
 }
 .info  input, .info textarea{
     height:40px;
-   width:100%;
+    width:100%;
     margin:10px 0 ;
 }
 .info{
@@ -683,12 +673,8 @@ a:hover{
 }
 
 @media screen and (min-width: 280px) { /* Phone-------------------------------------------------------------------*/
-
-
     /*---index.php---*/
     body{
-       /* height:1200px*/
-       /*min-height: 1000px;*/
        min-height: 850px;
    }
 
@@ -698,8 +684,6 @@ a:hover{
 
 
     
-   
-
 
 }
 
@@ -715,7 +699,7 @@ a:hover{
         margin-right:20px;
     }
     .profile ,.cart{
-        width:30%; /*50%*/
+        width:30%; 
         clear:left;
         margin-top: 0;
     }
@@ -816,7 +800,7 @@ a:hover{
 
 
 
-@media screen and (min-width: 540px) { /* was 560 px         530px-------------------------------------------------------------*/
+@media screen and (min-width: 540px) { /*-------------------------------------------------------------*/
    /*---------header.php---------*/
     .nav-bar a{
         min-width: 170px;
@@ -844,11 +828,8 @@ a:hover{
     }
 
     /*----index.php -----*/
-    .book-container{
-        justify-content:flex-start;
-    }
     .book-info{
-        margin:20px ;
+        margin:18px ;
     }
 
     /* ----book.php----*/
@@ -922,11 +903,6 @@ a:hover{
     }
     .search-btn{
         width: 15%;
-    }
-
-    /*---index.php----*/
-    .book-container{
-       justify-content:flex-start;
     }
 
     /* ----book.php----*/
