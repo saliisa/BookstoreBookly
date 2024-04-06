@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php require_once('connection.php'); ?>
-<div class="login">
+<div class="logon">
     <h1>Forgot password</h1>
     <a class="back-link" href="login.php"> <i class="fa-solid fa-angle-left"></i> Back</a>
     <div class="container">
@@ -21,19 +21,22 @@
         if (empty($email)) {
             echo '<p>Please fill in all fields</p>';
         } else {
-            $sql = "SELECT * FROM customer WHERE email = ?";
-            $stmt = $conn->prepare($sql);
-            if($stmt){
-                $stmt->bind_param("s", $email);
-                $stmt->execute();
-                $result = $stmt->get_result(); 
-                if($result->num_rows == 0){
-                    echo '<p> Email does not exist</p>'; 
-                }else{
-                   header('Location: forgot_password.php?reset=success');
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                echo '<p>Invalid email format</p>';
+            } else{
+                $sql = "SELECT * FROM customer WHERE email = ?";
+                $stmt = $conn->prepare($sql);
+                if($stmt){
+                    $stmt->bind_param("s", $email);
+                    $stmt->execute();
+                    $result = $stmt->get_result(); 
+                    if($result->num_rows == 0){
+                        echo '<p> Email does not exist</p>'; 
+                    }else{
+                    header('Location: forgot_password.php?reset=success');
+                    }
                 }
-            }
-            $stmt->close();
+            }   
         }
        
     }

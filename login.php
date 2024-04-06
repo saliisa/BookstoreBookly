@@ -22,24 +22,33 @@
 
         if (empty($email) || empty($password)) {
             echo '<p>Please fill in all fields</p>';
-        } else {
-            $sql = "SELECT * FROM customer WHERE email = ?";
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param("s", $email);
-            $stmt->execute();
-            $result = $stmt->get_result();
+        } else  {
 
-            if ($result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-                $hashedPassword = $row['cus_password'];
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                echo '<p>Invalid email format</p>';
 
-                if($email === $row['email']){
-                    if (password_verify($password, $hashedPassword)) {
-                        $_SESSION["Customer_id"] = $row['Customer_id'];
-                        $_SESSION["email"] = $email;
-                        header("Location: profile.php"); 
-                        exit();
-                    } else {
+            } else{
+                $sql = "SELECT * FROM customer WHERE email = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("s", $email);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    $hashedPassword = $row['cus_password'];
+
+                    if($email === $row['email']){
+                        if (password_verify($password, $hashedPassword)) {
+                            $_SESSION["Customer_id"] = $row['Customer_id'];
+                            $_SESSION["email"] = $email;
+                            header("Location: profile.php"); 
+                            exit();
+                        } else {
+                            echo '<br>';
+                            echo '<p>Invalid email or password</p>';
+                        }
+                    }else {
                         echo '<br>';
                         echo '<p>Invalid email or password</p>';
                     }
@@ -47,8 +56,9 @@
                     echo '<br>';
                     echo '<p>Invalid email or password</p>';
                 }
+                $stmt->close();
             }
-            $stmt->close();
+            
         }
         $conn->close();
     }
@@ -56,9 +66,9 @@
     </div>
     <form action="login.php" method="post">
         <label for="email"><i class="fa-solid fa-at"></i></label>
-        <input type="email" id="email" name="email" placeholder ="Email"><br>
+        <input type="email" id="email" name="email" placeholder ="Email" required><br>
         <label for="password"><i class="fas fa-lock"></i></label>
-        <input type="password" id="password" name="password"  placeholder ="Password"><br> 
+        <input type="password" id="password" name="password"  placeholder ="Password" required><br> 
         <a style="color: blue; text-decoration: underline;" href="forgot_password.php">Forgot password?</a>
         <button type="submit">Login</button>
         <br>

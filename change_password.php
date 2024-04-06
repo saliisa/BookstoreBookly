@@ -21,19 +21,23 @@
         if (empty($email)) {
             echo '<p>Please fill in all fields</p>';
         } else {
-            $sql = "SELECT * FROM customer WHERE email = ?";
-            $stmt = $conn->prepare($sql);
-            if($stmt){
-                $stmt->bind_param("s", $email);
-                $stmt->execute();
-                $result = $stmt->get_result(); 
-                if($result->num_rows == 0){
-                    echo '<p> Email does not exist</p>'; 
-                }else{
-                   header('Location: change_password.php?reset=success');
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                echo '<p>Invalid email format</p>';
+            } else{
+                $sql = "SELECT * FROM customer WHERE email = ?";
+                $stmt = $conn->prepare($sql);
+                if($stmt){
+                    $stmt->bind_param("s", $email);
+                    $stmt->execute();
+                    $result = $stmt->get_result(); 
+                    if($result->num_rows == 0){
+                        echo '<p> Email does not exist</p>'; 
+                    }else{
+                    header('Location: change_password.php?reset=success');
+                    }
                 }
+                $stmt->close();
             }
-            $stmt->close();
         }
     }
 
@@ -41,15 +45,13 @@
         if ($_GET['reset'] == 'success') {
             die(' <div class="status"><h2>Password Reset Link Sent </h2>
                     <p>We have sent you a password reset link, please check your email </p>
-                    <br>
-                     ');
+                    <br> ');
             exit();
         } else {
             die('<div class="status">
             <h2>Oops something went wrong</h2>
             <p>Please try again later</p>
             <br>
-           
             <div>');
             exit(); 
         }
@@ -57,7 +59,6 @@
     ?>
  <h2>Password Reset</h2>
     <form action="change_password.php" method="post">
-       
         <label for="email"><i class="fa-solid fa-at"></i></label>
         <input type="email" id="email" name="email" placeholder ="Email" required><br>
         <button type="submit">Continue</button>

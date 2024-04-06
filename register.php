@@ -33,38 +33,43 @@
         if (empty($firstname) || empty($lastname) || empty($email) || empty($password)) {
             echo "<p>Please fill in all fields.</p>";
         } else {
-            $checkUserQuery = "SELECT * FROM customer WHERE  email = ?";
-            $checkUserStmt = $conn->prepare($checkUserQuery);
 
-            if ($checkUserStmt) {
-                $checkUserStmt->bind_param("s",  $email);
-                $checkUserStmt->execute();
-                $result = $checkUserStmt->get_result();
-                $row = $result->fetch_assoc();
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                echo '<p>Invalid email format</p>';
+            } else{
+                $checkUserQuery = "SELECT * FROM customer WHERE  email = ?";
+                $checkUserStmt = $conn->prepare($checkUserQuery);
 
-                if ($row['email'] === $email) {
-                    echo '<p> Email already exists </p>';
-                } else {
-                    $insertUserQuery = "INSERT INTO customer (customer_id, first_name, last_name, email, cus_password) VALUES (?, ?, ?, ?, ?)";
-                    $insertUserStmt = $conn->prepare($insertUserQuery);
+                if ($checkUserStmt) {
+                    $checkUserStmt->bind_param("s",  $email);
+                    $checkUserStmt->execute();
+                    $result = $checkUserStmt->get_result();
+                    $row = $result->fetch_assoc();
 
-                    if ($insertUserStmt) {  
-                        $insertUserStmt->bind_param("issss", $customerID, $firstname,$lastname, $email, $hashedPassword);
-                        if ($insertUserStmt->execute()) {
-                            $_SESSION["Customer_id"] = $customerID;
-                            header("Location: profile.php");
-                            exit();
-                        } else {
-                            echo "Error: Something went wrong " . $insertUserStmt->error;
-                        }
-                        $insertUserStmt->close();
+                    if ($row['email'] === $email) {
+                        echo '<p> Email already exists </p>';
                     } else {
-                        echo "Error: Something went wrong " . $conn->error;
+                        $insertUserQuery = "INSERT INTO customer (customer_id, first_name, last_name, email, cus_password) VALUES (?, ?, ?, ?, ?)";
+                        $insertUserStmt = $conn->prepare($insertUserQuery);
+
+                        if ($insertUserStmt) {  
+                            $insertUserStmt->bind_param("issss", $customerID, $firstname,$lastname, $email, $hashedPassword);
+                            if ($insertUserStmt->execute()) {
+                                $_SESSION["Customer_id"] = $customerID;
+                                header("Location: profile.php");
+                                exit();
+                            } else {
+                                echo "Error: Something went wrong ";
+                            }
+                            $insertUserStmt->close();
+                        } else {
+                            echo "Error: Something went wrong ";
+                        }
                     }
+                    $checkUserStmt->close();
+                } else {
+                    echo "Error: Something went wrong";
                 }
-                $checkUserStmt->close();
-            } else {
-                echo "Error: Something went wrong" . $conn->error;
             }
         }
         $conn->close();
