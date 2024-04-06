@@ -2,18 +2,17 @@
   font-family: 'Poppins', sans-serif;
 }
 body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+  width: 12px;             
 }
 body::-webkit-scrollbar-track {
-  background:#30261D;        /* color of the tracking area */
+  background:#30261D;    
 }
 body::-webkit-scrollbar-thumb {
-  background-color: grey;    /* color of the scroll thumb */
-  border-radius: 2px;       /* roundness of the scroll thumb */
-  border: 3px solid  grey;  /* creates padding around scroll thumb */
+  background-color: grey;   
+  border-radius: 2px;     
+  border: 3px solid  grey; 
 }
 body{
- /* background-color: #F9F5E7;*/
  background-color: #d9d9d9;
  margin: 0;
 }
@@ -27,15 +26,15 @@ hr{
   margin:0;
 }
 
-/*------Staff_header.php ----------*/
+/*------Staff_header.php --------*/
 .header {
   background-color: #856141;
   border-style: none;
   padding: 10px;
   color: #d9d9d9;
- display: flex;
- justify-content: space-between;
- border-bottom: 2px  solid #594736;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px  solid #594736;
 }
 .header h1{
   margin:0;
@@ -80,7 +79,6 @@ hr{
   transition: .3s ease;
 }
 
-
 /*---------- Staff.php--------*/
 .login h1 {
   color: #F9F5E7;
@@ -106,7 +104,7 @@ hr{
   height: 50px;
   background-color: #856141;
   color: #F9F5E7;
- border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
 }
 .login form input[type="password"], .login form input[type="email"] {
   min-width: 200px;
@@ -134,8 +132,7 @@ hr{
 }
 
 
-/*-------------- staff_book.php ------------*/
-
+/*---------- staff_book.php ----------*/
 .toggle{
   background-color:#856141;
   color:white;
@@ -190,7 +187,6 @@ input[type="submit"]{
 .book-container{
   margin: 0 auto;
   margin: 30px;
-  /*margin-top*/
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -201,10 +197,10 @@ input[type="submit"]{
   background-color: #f7f5f5;
   border-radius: 2px;
   width: 220px;
-  margin:20px;
- text-align: center;
- display: grid;
- align-content: space-between;
+  margin:15px;
+  text-align: center;
+  display: grid;
+  align-content: space-between;
 }
 .book-info img{
   width:50%;
@@ -231,8 +227,7 @@ input[type="submit"]{
 }
 
 
-
-/*------single_book.php------------*/
+/*------single_book.php-----------*/
 .book-page{
   margin: 20px 10px;
   display: flex;
@@ -269,8 +264,7 @@ input[type="submit"]{
 }
 
 
-
-/*---------Staff_order.php------------*/
+/*---------Staff_order.php----------*/
 .order{
   width:85%;
   margin: 10px auto;
@@ -282,7 +276,6 @@ input[type="submit"]{
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 .order-info{
-  /*display:flex;*/
   flex-direction:column;
   flex-wrap: wrap;
   padding:10px;
@@ -306,7 +299,7 @@ input[type="submit"]{
   margin:10px;
 }
 
-/*---------single_order.php------------*/
+/*---------single_order.php----------*/
 .cus-info{
  margin:10px 0;
 }
@@ -320,7 +313,7 @@ input[type="submit"]{
 }
 
 
-/*---------search_book.php------------*/
+/*---------search_book.php----------*/
 .result-container{
   clear:both;
   min-height: 400px;
@@ -330,13 +323,10 @@ input[type="submit"]{
   flex-wrap: wrap;
   align-content:flex-start;
   justify-content: flex-start;
-
 }
 .no-results{
   width:100%;
 }
-
-
 
 /*---------add_book.php------------*/
 .form-book{ 
@@ -355,9 +345,7 @@ option{
   display:flex;
 }
 
-
 /*---------edit_book.php------------*/
-
 .submit{
   display:flex;
   flex-direction: column;
@@ -365,201 +353,186 @@ option{
 }
 
 
-
-
-@media screen and (min-width: 280px){
-
-
-}
-
-
 @media screen and (min-width: 420px){
+  /*-----staff_header.php-----*/
+  .nav-bar ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  .nav-bar a{
+    min-width:135px; /* 141px*/
+  }
+    
+  /*---------- Staff.php--------*/
+  .login form {
+    width:400px;
+  }
+  .login form input[type="password"], .login form input[type="email"] {
+    width: 310px;
+  }
 
-/*-----staff_header.php-----*/
-.nav-bar ul{
-  display: flex;
-  justify-content: space-around;
-}
-.nav-bar a{
-  min-width:135px; /* 141px*/
-}
-  
-/*---------- Staff.php--------*/
-.login form {
-  width:400px;
-}
-.login form input[type="password"], .login form input[type="email"] {
-  width: 310px;
-}
+  /*------ staff_book.php-----*/
+  .book-info{
+    width: 250px;
+  }
+  .top .toggle {
+    width:25%;
+    height:30px;
+  }
+  .search-bar input[type="text"]{
+    width:75%;
+    height:40px;
+  }
+  .search-bar input[type="submit"]{
+    width:20%;
+    height:43px;
+  }
+  .top{
+    flex-wrap: wrap;
+  }
 
-/*------ staff_book.php-----*/
-.book-info{
-  width: 250px;
-}
-.top .toggle {
-  width:25%;
-  height:30px;
-}
-.search-bar input[type="text"]{
-  width:75%;
-  height:40px;
-}
-.search-bar input[type="submit"]{
-  width:20%;
-  height:43px;
-}
-.top{
-  flex-wrap: wrap;
-}
+  /*------single_book.php------*/
+  .book-page img{
+    width: 60%;
+  }
 
-/*------single_book.php------*/
-.book-page img{
-  width: 60%;
-}
+  /*---------Staff_order.php------------*/
+  .items{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-/*---------Staff_order.php------------*/
-.items{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
+  /*---------edit_book.php------------*/
+  .submit{
+    flex-direction: row;
+    align-items: center;
+  }
+  .submit .toggle{
+  width: 150px;
+  }
 }
-
-/*---------edit_book.php------------*/
-.submit{
-  flex-direction: row;
-  align-items: center;
-}
-.submit .toggle{
- width: 150px;
-}
-
-}
-
 
 
 @media screen and (min-width: 540px){
-/*-----staff_header.php-----*/
-.nav-bar a{
-  min-width:175px; 
-}
+  /*-----staff_header.php-----*/
+  .nav-bar a{
+    min-width:175px; 
+  }
 
-/*------ staff_book.php-----*/
-.book-container{
-  justify-content: flex-start;
-}  
-.search-bar {
-  width:70%;
-}
-.top{
-  flex-direction: row;
-  align-items: baseline;
-}
-.top .toggle{
-  height:25px;
-  width:20%;
-}
+  /*------ staff_book.php-----*/
+  .search-bar {
+    width:70%;
+  }
+  .top{
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .top .toggle{
+    height:25px;
+    width:20%;
+  }
 
-/*------single_book.php------*/
-.book-page{
-  flex-direction: row;
-  align-items: flex-start;
-}
-.book-page img{
-  width: 40%;
-}
-.book-contents{
-  text-align: left;
-}
-.book-contents .toggle{
-  text-align: center;
-}
+  /*------single_book.php------*/
+  .book-page{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .book-page img{
+    width: 40%;
+  }
+  .book-contents{
+    text-align: left;
+  }
+  .book-contents .toggle{
+    text-align: center;
+  }
 
-/*---------single_order.php------------*/
-.cus-info{
-  float:left;
-  width: 50%;
-}
-.top h2{
-  width:25%;
-}
+  /*---------single_order.php------------*/
+  .cus-info{
+    float:left;
+    width: 50%;
+  }
+  .top h2{
+    width:25%;
+  }
 
-/*---------add_book.php------------*/
-.form-book{ 
-  width:500px;
+  /*---------add_book.php------------*/
+  .form-book{ 
+    width:500px;
+  }
 }
-
-}
-
 
 
 @media screen and (min-width: 700px){
-/*-----staff_header.php-----*/
-.nav-bar a{
-  min-width:225px; 
-}
+  /*-----staff_header.php-----*/
+  .nav-bar a{
+    min-width:225px; 
+  }
 
-/*------ staff_book.php-----*/
-.search-bar{
-  width:450px;
-}
-.top .toggle{
-  width:130px;
-}
+  /*------ staff_book.php-----*/
+  .search-bar{
+    width:450px;
+  }
+  .top .toggle{
+    width:130px;
+  }
 
-/*------single_book.php------*/
-.book-contents .toggle{
-  width: 50%;
-}
-.book-page img{
-  width: 350px;
-}
+  /*------single_book.php------*/
+  .book-contents .toggle{
+    width: 50%;
+  }
+  .book-page img{
+    width: 350px;
+  }
 
-/*---------Staff_order.php------------*/
-.order{
-  width:600px;
-}
+  /*---------Staff_order.php------*/
+  .order{
+    width:600px;
+  }
 
-/*---------single_order.php------------*/
-.top h2{
-  width:31%;
-}
-
+  /*---------single_order.php------*/
+  .top h2{
+    width:31%;
+  }
 }
 
 
 @media screen and (min-width: 900px){
-/*-----staff_header.php-----*/
-.nav-bar a{
-  min-width:290px; 
-}
-.logout{
- font-size: 18px;
-}
-.index{
-  font-size: large;
-}
+  /*-----staff_header.php-----*/
+  .nav-bar a{
+    min-width:290px; 
+  }
+  .logout{
+    font-size: 18px;
+  }
+  .index{
+    font-size: large;
+  }
 
-/*------single_book.php------*/
-.book-contents .toggle{
-  width: 30%;
-}
+  /*---staff_book----*/
+  .book-container{
+    justify-content: flex-start;
+  }
 
+  /*------single_book.php------*/
+  .book-contents .toggle{
+    width: 30%;
+  }
 }
-
 
 
 @media screen and (min-width: 1300px){
-/*-----staff_header.php-----*/
-.nav-bar a{
-  min-width:400px; 
-}
-.logout{
- font-size: 20px;
-}
+  /*-----staff_header.php-----*/
+  .nav-bar a{
+    min-width:400px; 
+  }
+  .logout{
+    font-size: 20px;
+  }
 
-/*------single_book.php------*/
-.book-author{
-  font-size:20px;
-}
-
+  /*------single_book.php------*/
+  .book-author{
+    font-size:20px;
+  }
 }
