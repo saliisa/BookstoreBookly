@@ -25,7 +25,7 @@
 
 <div class="book-container">
 <?php
-$itemsPerPage = 6; 
+$itemsPerPage = 8; 
 $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $offset = ($page - 1) * $itemsPerPage;
     
