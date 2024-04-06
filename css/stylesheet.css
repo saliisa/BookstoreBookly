@@ -672,24 +672,8 @@ a:hover{
     text-align: center;
 }
 
-@media screen and (min-width: 280px) { /* Phone-------------------------------------------------------------------*/
-    /*---index.php---*/
-    body{
-       min-height: 850px;
-   }
 
-  
-
- 
-
-
-    
-
-}
-
-
-
-@media screen and (min-width: 420px) { /* ------------------------------------------------------------*/
+@media screen and (min-width: 420px) { 
     /*---header.php---*/
     .logo {
         float: left;
@@ -795,12 +779,10 @@ a:hover{
         justify-content: space-between;
         align-items: center;
     }
-
 }
 
 
-
-@media screen and (min-width: 540px) { /*-------------------------------------------------------------*/
+@media screen and (min-width: 540px) { 
    /*---------header.php---------*/
     .nav-bar a{
         min-width: 170px;
@@ -889,8 +871,7 @@ a:hover{
 }
 
 
-
-@media screen and (min-width: 700px) { /* -------------------------------------------------------------------*/
+@media screen and (min-width: 700px) { 
    /*---header.php----*/
    .nav-bar a{
         min-width: 220px;
@@ -944,8 +925,7 @@ a:hover{
 }
 
 
-
-@media screen and (min-width: 900px) {/*-------------------------------------------------------------------*/
+@media screen and (min-width: 900px) {
     /*---header.php----*/
     .nav-bar a{
         min-width:285px; 
@@ -993,12 +973,10 @@ a:hover{
     .status{
         font-size:18px;
     }
-
 }
 
 
-
-@media screen and (min-width: 1300px){ /* -------------------------------------------------------------------*/
+@media screen and (min-width: 1300px){ 
     /*---header.php----*/
     .nav-bar a{
         min-width:400px; 
@@ -1016,7 +994,6 @@ a:hover{
     .create-order {
         justify-content: space-evenly;
     }
-
 }
 
 
