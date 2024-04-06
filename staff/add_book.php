@@ -29,23 +29,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $image = isset($_POST['image']) ? filter_var($_POST['image'], FILTER_SANITIZE_URL) : '';
 
     if (empty($isbn) || empty($title) || empty($author) || empty($pubYear) || empty($price) || empty($category) || empty($subcategory) || empty($description) || empty($image)) {
-        echo"Please fill in all the required fields.";
+        echo'<p class="error">Please fill in all fields.</p><br>';
     } else{
-        $stmt = $conn->prepare("INSERT INTO book (isbn, title, author, pub_year, price, category, subcategory, short_description, cover_image) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssdssss", $isbn, $title, $author, $pubYear, $price, $category, $subcategory, $description, $image);
 
-        if ($stmt->execute()) {
-            header('Location: staff_book.php');
-            exit();
-        } else {
-            die("Error adding book information. Please try again later.");
+        if($isbn > 13 || $isbn < 13){
+            echo '<p class="error">Invalid ISBN*</p><br>';
+        } else{
+            $stmt = $conn->prepare("INSERT INTO book (isbn, title, author, pub_year, price, category, subcategory, short_description, cover_image) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("ssssdssss", $isbn, $title, $author, $pubYear, $price, $category, $subcategory, $description, $image);
+
+            if ($stmt->execute()) {
+                header('Location: staff_book.php');
+                exit();
+            } else {
+                die("Error adding book information. Please try again later.");
+            }
         }
     }   
 }
 ?>
 <form class = "form-book" action="add_book.php" method="post">
-    <label for="isbn">ISBN:</label>
+    <label for="isbn">ISBN(13):</label>
     <input type="text" id="isbn" name="isbn" maxlength="13"><br>
 
     <label for="title">Title:</label>
