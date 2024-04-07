@@ -25,6 +25,9 @@ a {
 hr{
   margin:0;
 }
+.error{
+  color:red;
+}
 
 /*------Staff_header.php --------*/
 .header {
@@ -107,7 +110,7 @@ hr{
   border-radius: 5px 0 0 5px;
 }
 .login form input[type="password"], .login form input[type="email"] {
-  min-width: 200px;
+  min-width: 150px;
   height: 50px;
   border: 1px solid #dee0e4;
   margin-bottom: 20px;
@@ -365,10 +368,10 @@ option{
     
   /*---------- Staff.php--------*/
   .login form {
-    width:400px;
+    width:390px;
   }
   .login form input[type="password"], .login form input[type="email"] {
-    width: 310px;
+    width: 280px;
   }
 
   /*------ staff_book.php-----*/
@@ -409,7 +412,7 @@ option{
     align-items: center;
   }
   .submit .toggle{
-  width: 150px;
+    width: 150px;
   }
 }
 
