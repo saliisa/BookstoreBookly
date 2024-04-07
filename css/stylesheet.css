@@ -31,6 +31,9 @@ a {
 a:hover{
    color: #30261d;
 }
+.error{
+    color:red;
+}
 
 /*---header.php---*/
 .header {
@@ -700,7 +703,7 @@ a:hover{
         min-width: 130px;
     }
     .search-bar input[type=text]{
-        width:79%;
+        width:78%;
     }
     .search-btn{
         width: 18%;
