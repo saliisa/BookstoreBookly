@@ -18,19 +18,19 @@
     <?php
     if(isset($_GET['error'])){
         if($_GET['error'] === 'empty_fields'){
-            echo '<div class="error">Please fill in all fields.</div>';
+            echo '<p class="error">Please fill in all fields.</p><br>';
         }else if($_GET['error'] === 'invalid_firstname'){
-            echo '<p class="error">Invalid first name</p>';
+            echo '<p class="error">Invalid first name</p><br>';
         } else if($_GET['error'] === 'invalid_lastname'){
-            echo '<p class="error">Invalid last name</p>';
+            echo '<p class="error">Invalid last name</p><br>';
         }  else if($_GET['error'] === 'invalid_email'){
-            echo '<p class="error">Invalid email format</p>';
+            echo '<p class="error">Invalid email format</p><br>';
         }  else if($_GET['error'] === 'invalid_city'){
-            echo '<p class="error">Invalid city</p>';
+            echo '<p class="error">Invalid city</p><br>';
         } else if($_GET['error'] === 'invalid_country'){
-            echo '<p class="error">Invalid country</p>';
+            echo '<p class="error">Invalid country</p><br>';
         }else if ($_GET['error'] === 'invalid_postalcode'){
-            echo '<p class="error">Invalid postal code</p>';
+            echo '<p class="error">Invalid postal code</p><br>';
         }
     }   
     ?>
