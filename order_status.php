@@ -30,8 +30,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die(); 
     } else{
 
-        if(!is_string($firstname) || !is_string($lastname) || !is_string($city) || !is_string($country)){
-            header('Location: create_order.php?error=invalid_format');
+        if(!preg_match("/^[a-zA-Z\s]+$/", $firstname)){
+            header('Location: create_order.php?error=invalid_firstname');
+            die();
+        }
+
+        if( !preg_match("/^[a-zA-Z\s]+$/", $lastname)){
+            header('Location: create_order.php?error=invalid_lastname');
+            die();
+        }
+
+        if(!preg_match("/^[a-zA-Z\s]+$/", $city)){
+            header('Location: create_order.php?error=invalid_city');
+            die();
+        }
+        
+        if(!preg_match("/^[a-zA-Z\s]+$/", $country)){
+            header('Location: create_order.php?error=invalid_country');
             die();
         }
 
@@ -40,12 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die();
         } 
 
-        if(!is_numeric($postalCode)){
-            header('Location: create_order.php?error=invalid_postalcode');
-            die();
-        }
-        
-        if (strlen($postalCode)  > 5 || strlen($postalCode)  < 5){
+        if(!is_numeric($postalCode) || strlen($postalCode) != 5){
             header('Location: create_order.php?error=invalid_postalcode');
             die();
         }
