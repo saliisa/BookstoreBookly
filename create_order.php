@@ -19,12 +19,12 @@
     if(isset($_GET['error'])){
         if($_GET['error'] === 'empty_fields'){
             echo '<div class="error">Please fill in all fields.</div>';
-        }else if ($_GET['error'] === 'invalid_postalcode'){
-            echo '<p class="error">Invalid postal code</p>';
+        }else if($_GET['error'] === 'invalid_format'){
+            echo '<p class="error">Invalid input format</p>';
         } else if($_GET['error'] === 'invalid_email'){
             echo '<p class="error">Invalid email format</p>';
-        } else if($_GET['error'] === 'invalid_format'){
-            echo '<p class="error">Invalid input format</p>';
+        }  else if ($_GET['error'] === 'invalid_postalcode'){
+            echo '<p class="error">Invalid postal code</p>';
         }
     }   
     ?>
@@ -65,25 +65,25 @@
         <div class="info">
             <form class="" action="order_status.php" method="POST">
                 <label for="firstname">First Name:</label><br> 
-                <input type="text" id="firstname" name="firstname" ><br>
+                <input type="text" id="firstname" name="firstname" required><br>
 
                 <label for="lastname">Last Name:</label><br>
-                <input type="text" id="lastname" name="lastname"><br>
+                <input type="text" id="lastname" name="lastname"  required><br>
                     
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" ><br>
+                <input type="email" id="email" name="email"  required><br>
 
                 <label for="address">Address:</label><br>
-                <textarea name="address" id="address" cols="50" rows="5" ></textarea><br>
+                <textarea name="address" id="address" cols="50" rows="5"  required></textarea><br>
 
                 <label for="city">City:</label><br>
-                <input type="text" id="city" name="city"><br>
+                <input type="text" id="city" name="city"  required ><br>
 
                 <label for="country">Country:</label><br>
-                <input type="text" id="country" name="country"><br>
+                <input type="text" id="country" name="country"  required><br>
 
                 <label for="postal_code">Postal Code:</label><br>
-                <input type="text" id="postal_code" name="postal_code" maxlength="5" ><br><br>
+                <input type="text" id="postal_code" name="postal_code" maxlength="5" required ><br><br>
 
                 <input type="hidden" id="cusID" name="cusID" ><br><br>
 
