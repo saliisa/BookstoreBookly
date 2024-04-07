@@ -1,4 +1,3 @@
-
 <?php include('header.php'); ?>
 <?php require_once('connection.php'); ?>
 <?php require_once('protected.php'); ?>
@@ -17,6 +16,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       header('Location: edit_user.php?error=empty_fields');
       die();
     }else {
+        if(!preg_match("/^[a-zA-Z\s]+$/", $firstname)){
+            header('Location: edit_user.php?error=invalid_firstname');
+            die();
+        }
+
+        if( !preg_match("/^[a-zA-Z\s]+$/", $lastname)){
+            header('Location: edit_user.php?error=invalid_lastname');
+            die();
+        }
+
+        if(!preg_match("/^[a-zA-Z\s]+$/", $city)){
+            header('Location: edit_user.php?error=invalid_city');
+            die();
+        }
+        
+        if(!preg_match("/^[a-zA-Z\s]+$/", $country)){
+            header('Location: edit_user.php?error=invalid_country');
+            die();
+        }
+
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            header('Location: edit_user.php?error=invalid_email');
+            die();
+        } 
+
+        if(!is_numeric($postalCode) || strlen($postalCode) != 5){
+            header('Location: edit_user.php?error=invalid_postalcode');
+            die();
+        }
+
         $updateQuery = "UPDATE customer SET first_name = ?, last_name = ?, email= ?, 
         address= ?, city= ?, country = ?, postal_code= ? WHERE Customer_id = ?";
         $stmt = $conn->prepare($updateQuery);
@@ -26,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: profile.php');
             exit;
         } else {
-            die("Error: " . $stmt->error);
+            die('Something went wrong');
         }
     }
 } else {
