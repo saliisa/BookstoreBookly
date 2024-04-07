@@ -29,41 +29,60 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $image = isset($_POST['image']) ? filter_var($_POST['image'], FILTER_SANITIZE_URL) : '';
 
     if (empty($isbn) || empty($title) || empty($author) || empty($pubYear) || empty($price) || empty($category) || empty($subcategory) || empty($description) || empty($image)) {
-        echo'<p class="error">Please fill in all fields.</p><br>';
+       header('Location: add_book.php?error=empty_fields');
+       die();
+
     } else{
-
-        if($isbn > 13 || $isbn < 13){
-            echo '<p class="error">Invalid ISBN*</p><br>';
-        } else{
-            $stmt = $conn->prepare("INSERT INTO book (isbn, title, author, pub_year, price, category, subcategory, short_description, cover_image) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("ssssdssss", $isbn, $title, $author, $pubYear, $price, $category, $subcategory, $description, $image);
-
-            if ($stmt->execute()) {
-                header('Location: staff_book.php');
-                exit();
-            } else {
-                die("Error adding book information. Please try again later.");
-            }
+        if(!is_numeric($isbn) || strlen($isbn) != 13){
+            header('Location: add_book.php?error=invalid_isbn');
+            die();       
         }
+
+        if (!preg_match("/^[a-zA-Z\s]+$/", $author)){
+            header('Location: add_book.php?error=invalid_author');
+            die();  
+        }
+        
+        $stmt = $conn->prepare("INSERT INTO book (isbn, title, author, pub_year, price, category, subcategory, short_description, cover_image) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssdssss", $isbn, $title, $author, $pubYear, $price, $category, $subcategory, $description, $image);
+
+        if ($stmt->execute()) {
+            header('Location: staff_book.php');
+            exit();
+        } else {
+            die("Error adding book information. Please try again later.");
+        }
+        
     }   
 }
 ?>
+<?php 
+	if(isset($_GET['error'])){
+		if($_GET['error'] === 'empty_fields'){
+			echo '<p class="error">Please fill in all fields.</p><br>';
+		}else if($_GET['error'] === 'invalid_author'){
+			echo '<p class="error">Invalid author</p><br>';
+		}  else if($_GET['error'] === 'invalid_isbn'){
+			echo '<p class="error">Invalid ISBN</p><br>';
+		}  
+	}  
+?>
 <form class = "form-book" action="add_book.php" method="post">
     <label for="isbn">ISBN(13):</label>
-    <input type="text" id="isbn" name="isbn" maxlength="13"><br>
+    <input type="text" id="isbn" name="isbn" maxlength="13" required><br>
 
     <label for="title">Title:</label>
-    <input type="text" id="title" name="title" ><br>
+    <input type="text" id="title" name="title" required><br>
 
     <label for="author">Author:</label>
-    <input type="text" id="author" name="author" ><br>
+    <input type="text" id="author" name="author" required><br>
 
     <label for="published_year">Published Year:</label>
-    <input type="date" id="published_year" name="published_year" ><br>
+    <input type="date" id="published_year" name="published_year" required><br>
 
     <label for="price">Price:</label>
-    <input type="number" id="price" name="price" step="0.01" ><br>
+    <input type="number" id="price" name="price" step="0.01"  required><br>
 
     <label for="category">Category:</label>
     <select name="category" id="categorySelect">
@@ -101,10 +120,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </script>
 
     <label for="short_description">Short Description:</label>
-    <textarea name="short_description" id="short_description" cols="30" rows="10"></textarea>
+    <textarea name="short_description" id="short_description" cols="30" rows="10" required></textarea>
 
     <label for="image">Cover Image</label>
-    <input type="text" id="image" name="image" ><br>
+    <input type="text" id="image" name="image" required><br>
 
     <input class="toggle" type="submit" value="Add Book">
 </form>
