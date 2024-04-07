@@ -27,7 +27,7 @@ if (isset($_GET['bookID'])) {
     if ($result) {
       $row = $result->fetch_assoc();
     } else {
-        die("Error: " . $stmt->error);
+        die("Something went wrong.");
     }
 } else {
     die("Book ID not provided.");
@@ -35,14 +35,20 @@ if (isset($_GET['bookID'])) {
 ?>
 <h2>Edit Book</h2> 
 <?php 
-    if (isset($_GET['error']) && $_GET['error'] === 'empty_fields') {
-        echo " Please fill in all the required fields.";
-    } 
+	if(isset($_GET['error'])){
+		if($_GET['error'] === 'empty_fields'){
+			echo '<p class="error">Please fill in all fields.</p>';
+		}else if($_GET['error'] === 'invalid_author'){
+			echo '<p class="error">Invalid author</p>';
+		}  else if($_GET['error'] === 'invalid_isbn'){
+			echo '<p class="error">Invalid ISBN</p>';
+		}  
+	}  
 ?>
     <form class="form-book" action="update_book.php" method="post">
         <input type="text" name="bookID" value="<?php echo htmlspecialchars($bookID); ?>" hidden ><br> 
 
-        <label for="isbn">ISBN:</label>
+        <label for="isbn">ISBN(13):</label>
         <input type="text" name="isbn" value="<?php echo htmlspecialchars($row['isbn']); ?>"  maxlength="13" ><br> 
 
         <label for="title">Title:</label>
