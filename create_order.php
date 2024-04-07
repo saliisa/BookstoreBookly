@@ -16,9 +16,17 @@
 <div class="container">
     <h2>Fill in below:</h2>
     <?php
-    if (isset($_GET['error']) && $_GET['error'] === 'empty_fields') {
-        echo '<div class="error">Please fill in all fields.</div>';
-    }
+    if(isset($_GET['error'])){
+        if($_GET['error'] === 'empty_fields'){
+            echo '<div class="error">Please fill in all fields.</div>';
+        }else if ($_GET['error'] === 'invalid_postalcode'){
+            echo '<p class="error">Invalid postal code</p>';
+        } else if($_GET['error'] === 'invalid_email'){
+            echo '<p class="error">Invalid email format</p>';
+        } else if($_GET['error'] === 'invalid_format'){
+            echo '<p class="error">Invalid input format</p>';
+        }
+    }   
     ?>
     <div class="create-order">
         <div class="cart-review"> 

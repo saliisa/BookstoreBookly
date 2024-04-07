@@ -28,7 +28,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($firstname) || empty($lastname) || empty($email) || empty($address) || empty($city)|| empty($country)|| empty($postalCode) ){
         header('Location: create_order.php?error=empty_fields');
         die(); 
-    } else {
+    } else{
+
+        if(!is_string($firstname) || !is_string($lastname) || !is_string($city) || !is_string($country)){
+            header('Location: create_order.php?error=invalid_format');
+            die();
+        }
+
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            header('Location: create_order.php?error=invalid_email');
+            die();
+        } 
+
+        if(!is_numeric($postalCode)){
+            header('Location: create_order.php?error=invalid_postalcode');
+            die();
+        }
+        
+        if (strlen($postalCode)  > 5 || strlen($postalCode)  < 5){
+            header('Location: create_order.php?error=invalid_postalcode');
+            die();
+        }
+
         $orderDate = date('Y-m-d');
         $deliveryDate = date('Y-m-d', strtotime($orderDate . ' + 3 days'));
 
