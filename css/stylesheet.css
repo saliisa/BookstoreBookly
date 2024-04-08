@@ -982,6 +982,11 @@ a:hover{
     .content{
         width:700px;
     }
+    
+    /*---cart.php---*/
+      .cart-item{
+        width:80%;
+    }
 
    /*---create_order.php--*/
     .cart-review-item{
