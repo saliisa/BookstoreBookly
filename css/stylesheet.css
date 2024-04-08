@@ -331,10 +331,15 @@ a:hover{
     width:100%;
     text-align:center;
 }
-.book-contents .toggle, .addtocart input[type="number"]{
+.book-contents .toggle {
     width:80%;
     height:35px;
 } 
+
+.addtocart input[type="number"]{
+    width:78%;
+    height:32px;
+}
 .book-description{
     text-align: left;
 }
@@ -738,10 +743,13 @@ a:hover{
     .book-page img{
         width: 60%;
     }
-    .book-contents .toggle, .addtocart input[type="number"]{
-        width:65%;
+    .book-contents .toggle{ 
+        width:60%;
     } 
 
+    .addtocart input[type="number"]{
+        width:58%;
+    }
     /*---fiction.php & non-fiction.php---*/
    .subcategory-container{
         min-height: 300px;
@@ -899,10 +907,12 @@ a:hover{
         width:70%;
         text-align: left;
     }
-    .book-contents .toggle, .addtocart input[type="number"]{
+    .book-contents .toggle {
       max-width:200px;
     } 
-    
+    .addtocart input[type="number"]{
+        max-width:190px;
+    }
     /*---category.php---*/
     .category-container{
        margin-left:10%;
