@@ -564,6 +564,7 @@ a:hover{
    align-items: center;
    margin:5px;
    justify-content: center;
+   min-width: 80px;
 }
 .cart-content{
     width: 90%;
@@ -578,12 +579,6 @@ a:hover{
     padding:10px;
     border-bottom:  2px solid #c8c6c6;
 }
-.cart-item{
-    border-collapse: collapse;
-    border-radius:2px; 
-    display: flex;
-    flex-direction: column;
-} 
 .cart-header{
     background-color: #856141;
     color: white;
@@ -783,6 +778,10 @@ a:hover{
     .button{
         margin:20px;
     }
+    /*---cart.php---*/
+    .cart-item{
+        width:80%;
+    }
 
     /*---order_history---*/
     .items{
@@ -867,8 +866,8 @@ a:hover{
     }
 
     /*---cart.php---*/
-    .item{
-        flex-direction: row;
+    .cart-item{
+       width:70%;
     }
 
     /*---create_order.php---*/
@@ -923,9 +922,18 @@ a:hover{
         width:125px;   
     }
 
+     /*---cart.php---*/
+    .item{
+        flex-direction: row;
+    }
+    .cart-item{
+        width:100%;
+    }
+
     /*--order_history--*/
      .order{
        width:600px;
+    
     }
     
     /*---create_order.php---*/
