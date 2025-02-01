@@ -16,8 +16,8 @@ Staff members can:
 The system is built with **HTML, CSS, PHP, and MySQL** and works on **Google Chrome, Microsoft Edge, and mobile devices**.  
 
 ## **2. Installation & Setup**  
-1. Copy the `Bookly` folder to the PHP server directory (e.g., `htdocs` for XAMPP).  
-2. Import `bookly.sql` into MySQL and ensure the database name is **bookly**.  
+1. Download the files into a folder and add that folder to the PHP server directory (`htdocs` for XAMPP).  
+2. Import `bookly.sql` into phpmyadmin and ensure the database name is **bookly**.  
 3. Access the system:  
    - **Customer side:** `http://localhost/Bookly/index.php`  
    - **Staff side:** `http://localhost/Bookly/staff/staff.php`  
